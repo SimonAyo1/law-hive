@@ -1,0 +1,380 @@
+<div>
+    <p class="card-title">Cases For The Day</p>
+</div>
+<!--
+<div class="mat-div-parent" >
+    <div class="mat-div"  >
+        <mat-card class="card"  *ngFor = "let data of datas">
+            <mat-card-header>
+                <mat-card-title>
+                    {{data.name}}
+                </mat-card-title>
+                <mat-card-subtitle>
+                  
+                </mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <p>
+                </p>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </mat-card-content>
+            <mat-card-actions align="end">
+                <button mat-raised-button routerLink="read" (click)="onClick()">Read</button>
+            </mat-card-actions>
+        </mat-card>
+       
+    </div>
+</div>
+-->
+<div class="mat-div-parent" >
+    <!--First card section-->
+    {{a}}
+    <div class="mat-div">
+        <mat-card class="card">
+            <mat-card-header>
+                <mat-card-title>
+                    {{datas[0].name}}
+                </mat-card-title>
+                <mat-card-subtitle>
+                    {{datas[0].name_abbreviation}}
+                </mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <ul>
+                    <li><span>Jusrisdiction: </span>  {{datas[0].jurisdiction.name_long}}</li>
+                    <li><span>Court:</span>  {{datas[0].court.name}}</li>
+                    <li><span>Decision date: </span> {{datas[0].decision_date}}</li>
+                </ul>
+            </mat-card-content>
+            <div class="button-mat">
+                <mat-card-actions align="start">
+                    <a href= "{{datas[0].frontend_pdf_url}}" >
+                     <button mat-raised-button>PDF</button>
+                    </a>
+                 </mat-card-actions>
+                 <mat-card-actions align="end">
+                     <button mat-raised-button  (click)="onClick1()">Read</button>
+                 </mat-card-actions>
+                </div>
+             </mat-card>
+             <mat-card class="card">
+                <mat-card-header>
+                    <mat-card-title>
+                        {{datas[1].name}}
+                    </mat-card-title>
+                    <mat-card-subtitle>
+                        {{datas[1].name_abbreviation}}
+                    </mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <ul>
+                        <li><span>Jusrisdiction: </span>  {{datas[1].jurisdiction.name_long}}</li>
+                        <li><span>Court:</span>  {{datas[1].court.name}}</li>
+                        <li><span>Decision date: </span> {{datas[1].decision_date}}</li>
+                    </ul>
+                </mat-card-content>
+                <div class="button-mat">
+                    <mat-card-actions align="start">
+                        <a href= "{{datas[1].frontend_pdf_url}}" >
+                         <button mat-raised-button >PDF</button>
+                        </a>
+                     </mat-card-actions>
+                     <mat-card-actions align="end">
+                         <button mat-raised-button routerLink="read" (click)="onClick2()">Read</button>
+                     </mat-card-actions>
+                    </div>
+                 </mat-card>
+
+                 <mat-card class="card">
+                    <mat-card-header>
+                        <mat-card-title>
+                            {{datas[2].name}}
+                        </mat-card-title>
+                        <mat-card-subtitle>
+                            {{datas[2].name_abbreviation}}
+                        </mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <ul>
+                            <li><span>Jusrisdiction: </span>  {{datas[2].jurisdiction.name_long}}</li>
+                            <li><span>Court:</span>  {{datas[2].court.name}}</li>
+                            <li><span>Decision date: </span> {{datas[2].decision_date}}</li>
+                        </ul>
+                    </mat-card-content>
+                    <div class="button-mat">
+                        <mat-card-actions align="start">
+                            <a href= "{{datas[2].frontend_pdf_url}}" >
+                             <button mat-raised-button >PDF</button>
+                            </a>
+                         </mat-card-actions>
+                         <mat-card-actions align="end">
+                             <button mat-raised-button routerLink="read" (click)="onClick3()">Read</button>
+                         </mat-card-actions>
+                        </div>
+                     </mat-card>
+          </div>
+          
+   
+    <!-- second card section-->
+    <div class="mat-div">
+        <mat-card class="card">
+            <mat-card-header>
+                <mat-card-title>
+                    {{datas[3].name}}
+                </mat-card-title>
+                <mat-card-subtitle>
+                    {{datas[3].name_abbreviation}}
+                </mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <ul>
+                    <li><span>Jusrisdiction: </span>  {{datas[3].jurisdiction.name_long}}</li>
+                    <li><span>Court:</span>  {{datas[3].court.name}}</li>
+                    <li><span>Decision date: </span> {{datas[3].decision_date}}</li>
+                </ul>
+            </mat-card-content>
+            <div class="button-mat">
+                <mat-card-actions align="start">
+                    <a href= "{{datas[3].frontend_pdf_url}}" >
+                     <button mat-raised-button >PDF</button>
+                    </a>
+                 </mat-card-actions>
+                 <mat-card-actions align="end">
+                     <button mat-raised-button routerLink="read" (click)="onClick4()">Read</button>
+                 </mat-card-actions>
+                </div>
+             </mat-card>
+             <mat-card class="card">
+                <mat-card-header>
+                    <mat-card-title>
+                        {{datas[4].name}}
+                    </mat-card-title>
+                    <mat-card-subtitle>
+                        {{datas[4].name_abbreviation}}
+                    </mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <ul>
+                        <li><span>Jusrisdiction: </span>  {{datas[4].jurisdiction.name_long}}</li>
+                        <li><span>Court:</span>  {{datas[4].court.name}}</li>
+                        <li><span>Decision date: </span> {{datas[4].decision_date}}</li>
+                    </ul>
+                </mat-card-content>
+                <div class="button-mat">
+                    <mat-card-actions align="start">
+                        <a href= "{{datas[4].frontend_pdf_url}}" >
+                         <button mat-raised-button >PDF</button>
+                        </a>
+                     </mat-card-actions>
+                     <mat-card-actions align="end">
+                         <button mat-raised-button routerLink="read" (click)="onClick5()">Read</button>
+                     </mat-card-actions>
+                    </div>
+                 </mat-card>
+
+                 <mat-card class="card">
+                    <mat-card-header>
+                        <mat-card-title>
+                            {{datas[5].name}}
+                        </mat-card-title>
+                        <mat-card-subtitle>
+                            {{datas[5].name_abbreviation}}
+                        </mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <ul>
+                            <li><span>Jusrisdiction: </span>  {{datas[5].jurisdiction.name_long}}</li>
+                            <li><span>Court:</span>  {{datas[5].court.name}}</li>
+                            <li><span>Decision date: </span> {{datas[5].decision_date}}</li>
+                        </ul>
+                    </mat-card-content>
+                    <div class="button-mat">
+                        <mat-card-actions align="start">
+                            <a href= "{{datas[5].frontend_pdf_url}}" >
+                             <button mat-raised-button >PDF</button>
+                            </a>
+                         </mat-card-actions>
+                         <mat-card-actions align="end">
+                             <button mat-raised-button routerLink="read" (click)="onClick6()">Read</button>
+                         </mat-card-actions>
+                        </div>
+                     </mat-card>
+          </div>
+          
+    <!-- third card section-->
+    <div class="mat-div">
+        <mat-card class="card">
+            <mat-card-header>
+                <mat-card-title>
+                    {{datas[6].name}}
+                </mat-card-title>
+                <mat-card-subtitle>
+                    {{datas[6].name_abbreviation}}
+                </mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <ul>
+                    <li><span>Jusrisdiction: </span>  {{datas[6].jurisdiction.name_long}}</li>
+                    <li><span>Court:</span>  {{datas[6].court.name}}</li>
+                    <li><span>Decision date: </span> {{datas[6].decision_date}}</li>
+                </ul>
+            </mat-card-content>
+            <div class="button-mat">
+                <mat-card-actions align="start">
+                    <a href= "{{datas[6].frontend_pdf_url}}" >
+                     <button mat-raised-button >PDF</button>
+                    </a>
+                 </mat-card-actions>
+                 <mat-card-actions align="end">
+                     <button mat-raised-button routerLink="read" (click)="onClick7()">Read</button>
+                 </mat-card-actions>
+                </div>
+             </mat-card>
+             <mat-card class="card">
+                <mat-card-header>
+                    <mat-card-title>
+                        {{datas[7].name}}
+                    </mat-card-title>
+                    <mat-card-subtitle>
+                        {{datas[7].name_abbreviation}}
+                    </mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <ul>
+                        <li><span>Jusrisdiction: </span>  {{datas[7].jurisdiction.name_long}}</li>
+                        <li><span>Court:</span>  {{datas[7].court.name}}</li>
+                        <li><span>Decision date: </span> {{datas[7].decision_date}}</li>
+                    </ul>
+                </mat-card-content>
+                <div class="button-mat">
+                    <mat-card-actions align="start">
+                        <a href= "{{datas[7].frontend_pdf_url}}" >
+                         <button mat-raised-button >PDF</button>
+                        </a>
+                     </mat-card-actions>
+                     <mat-card-actions align="end">
+                         <button mat-raised-button routerLink="read" (click)="onClick8()">Read</button>
+                     </mat-card-actions>
+                    </div>
+                 </mat-card>
+
+                 <mat-card class="card">
+                    <mat-card-header>
+                        <mat-card-title>
+                            {{datas[8].name}}
+                        </mat-card-title>
+                        <mat-card-subtitle>
+                            {{datas[8].name_abbreviation}}
+                        </mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <ul>
+                            <li><span>Jusrisdiction: </span>  {{datas[8].jurisdiction.name_long}}</li>
+                            <li><span>Court:</span>  {{datas[8].court.name}}</li>
+                            <li><span>Decision date: </span> {{datas[8].decision_date}}</li>
+                        </ul>
+                    </mat-card-content>
+                    <div class="button-mat">
+                        <mat-card-actions align="start">
+                            <a href= "{{datas[8].frontend_pdf_url}}" >
+                             <button mat-raised-button >PDF</button>
+                            </a>
+                         </mat-card-actions>
+                         <mat-card-actions align="end">
+                             <button mat-raised-button routerLink="read" (click)="onClick9()">Read</button>
+                         </mat-card-actions>
+                        </div>
+                     </mat-card>
+          </div>
+          
+    <!-- fourth card section-->
+    <div class="mat-div">
+        <mat-card class="card">
+            <mat-card-header>
+                <mat-card-title>
+                    {{datas[9].name}}
+                </mat-card-title>
+                <mat-card-subtitle>
+                    {{datas[9].name_abbreviation}}
+                </mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <ul>
+                    <li><span>Jusrisdiction: </span>  {{datas[9].jurisdiction.name_long}}</li>
+                    <li><span>Court:</span>  {{datas[9].court.name}}</li>
+                    <li><span>Decision date: </span> {{datas[9].decision_date}}</li>
+                </ul>
+            </mat-card-content>
+            <div class="button-mat">
+                <mat-card-actions align="start">
+                    <a href= "{{datas[9].frontend_pdf_url}}" >
+                     <button mat-raised-button >PDF</button>
+                    </a>
+                 </mat-card-actions>
+                 <mat-card-actions align="end">
+                     <button mat-raised-button routerLink="read" (click)="onClick10()">Read</button>
+                 </mat-card-actions>
+                </div>
+             </mat-card>
+             <mat-card class="card">
+                <mat-card-header>
+                    <mat-card-title>
+                        {{datas[10].name}}
+                    </mat-card-title>
+                    <mat-card-subtitle>
+                        {{datas[10].name_abbreviation}}
+                    </mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <ul>
+                        <li><span>Jusrisdiction: </span>  {{datas[10].jurisdiction.name_long}}</li>
+                        <li><span>Court:</span>  {{datas[10].court.name}}</li>
+                        <li><span>Decision date: </span> {{datas[10].decision_date}}</li>
+                    </ul>
+                </mat-card-content>
+                <div class="button-mat">
+                    <mat-card-actions align="start">
+                        <a href= "{{datas[10].frontend_pdf_url}}" >
+                         <button mat-raised-button >PDF</button>
+                        </a>
+                     </mat-card-actions>
+                     <mat-card-actions align="end">
+                         <button mat-raised-button routerLink="read" (click)="onClick11()">Read</button>
+                     </mat-card-actions>
+                    </div>
+                 </mat-card>
+
+                 <mat-card class="card">
+                    <mat-card-header>
+                        <mat-card-title>
+                            {{datas[11].name}}
+                        </mat-card-title>
+                        <mat-card-subtitle>
+                            {{datas[11].name_abbreviation}}
+                        </mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <ul>
+                            <li><span>Jusrisdiction: </span>  {{datas[11].jurisdiction.name_long}}</li>
+                            <li><span>Court:</span>  {{datas[11].court.name}}</li>
+                            <li><span>Decision date: </span> {{datas[11].decision_date}}</li>
+                        </ul>
+                    </mat-card-content>
+                    <div class="button-mat">
+                        <mat-card-actions align="start">
+                            <a href= "{{datas[11].frontend_pdf_url}}" >
+                             <button mat-raised-button >PDF</button>
+                            </a>
+                         </mat-card-actions>
+                         <mat-card-actions align="end">
+                             <button mat-raised-button routerLink="read" (click)="onClick12()">Read</button>
+                         </mat-card-actions>
+                        </div>
+                     </mat-card>
+          </div>
+          <!--End Of Card Section-->
+</div>
