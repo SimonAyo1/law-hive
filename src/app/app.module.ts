@@ -14,21 +14,21 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { NavComponent } from './nav/nav.component';
 import { CardsComponent } from './cards/cards.component';
 import { CardReadComponent } from './card-read/card-read.component';
 import { IndexComponent } from './index/index.component';
-
+import { FormsModule } from '@angular/forms';
+import { SearchResultComponent } from './search-result/search-result.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent,
     CardsComponent,
     CardReadComponent,
-    IndexComponent, 
+    IndexComponent,
+    SearchResultComponent, 
     
  
   ],
@@ -47,7 +47,7 @@ import { IndexComponent } from './index/index.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-
+    FormsModule
    
   ],
   

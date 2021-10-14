@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { CardReadComponent } from './card-read/card-read.component';
 import { CardsComponent } from './cards/cards.component';
 import { IndexComponent } from './index/index.component';
+import { SearchResultComponent } from './search-result/search-result.component';
+
 
 const routes: Routes = [
   {
@@ -12,7 +14,10 @@ const routes: Routes = [
     path: 'a-case', component: CardsComponent,
   },
   {
-    path: 'read/:name', component: CardReadComponent,
+    path: 'read/:name/:id', component: CardReadComponent,
+  },
+  {
+    path: 'search/:query', component: SearchResultComponent,
   }
 ];
 

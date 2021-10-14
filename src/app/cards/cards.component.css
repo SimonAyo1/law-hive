@@ -8,9 +8,12 @@
   }
   
   .mat-card {
-      background: rgb(255, 255, 255);
+    background-image:  url("../../assets/images/judge.png");
+  background-position: center;
+  background-size: cover;
+  
       width: 360px;
-      color: rgb(48, 42, 42);
+      color: rgb(230, 219, 219);
       font-size: 20px;
       border-radius: 10px 10px;
       
@@ -22,14 +25,23 @@
 }
   span {
       font-weight: 500;
+     color: rgb(255, 255, 255);;
   }
   .mat-div {
       display: flex;
       flex-direction: row;
       justify-content: space-around;
-      background: rgba(20, 36, 21, 0.322);
+      background: rgba(243, 231, 229, 0.37);
       margin-top: 20px;
+      border-radius: 10px 10px;
   }
+  .mat-div-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: rgba(20, 36, 21, 0.322);
+    margin-top: 20px;
+}
   
   .mat-div-parent {
       margin-top: 20px;
@@ -37,13 +49,20 @@
       flex-direction: column;
       padding-bottom: 30px;
   }
+  .mat-div-parent-mobile {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+    width: fit-content;
+}
   
   mat-card-title {
       font-weight: bold;
       color: tomato;
   }
   mat-card-subtitle {
-   color: rgb(48, 42, 42);
+   color: rgb(255, 255, 255);
 }
 .button-mat {
     display: flex;

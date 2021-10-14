@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../config/api.service';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Observable } from 'rxjs';
-import { map, shareReplay } from 'rxjs/operators';
 import { Router } from '@angular/router'
 
 
@@ -15,77 +12,79 @@ import { Router } from '@angular/router'
 
 
 export class CardsComponent implements OnInit {
-   a: any = setInterval(()=> {
-    Math.ceil(Math.random());
-   }, 1000)
-   b : number = 10 + Math.ceil(Math.random());
-   c : number = 20 + Math.ceil(Math.random());
-   d : number = 30 + Math.ceil(Math.random());
-   e : number = Math.ceil(Math.random());
+   
+   width: number = screen.width;
+   isMobile: boolean = false;
+   isNotMobile: boolean = false;
+   isLarge: boolean = false;
+
   public datas : any = []
   constructor(private api : ApiService,
-     private breakpointObserver: BreakpointObserver, 
      private route : Router) {
       
-      setInterval(() => {
-     
-    }, 1000)
+      if(this.width <= 600) {
+        this.isMobile = true
+      }
+      else if(this.width >= 601) {
+        this.isNotMobile = true
+      }
+      else if(this.width <= 600) {
+        this.isLarge = true
+      }
+      
+  
+
+
+    
     this.api.getData() 
      .subscribe((e) => {
       this.datas = e.results
-      
-      console.log(this.datas)
-   })
-   this.api.getApiRoot() 
-     .subscribe((d) => {
-      console.log(d)
    })
    
  
   }
  
   
-   
+  onClick(i:number) {
+    this.route.navigate(['read/' + this.datas[i].name + "/" + this.datas[i].id])
+}
+
   onClick1() {
-      this.route.navigate(['read/' + this.datas[0].name ])
+      this.route.navigate(['read/' + this.datas[0].name + "/" + this.datas[0].id])
   }
   onClick2() {
-      this.route.navigate(['read/' + this.datas[1].name ])
+    this.route.navigate(['read/' + this.datas[1].name + "/" + this.datas[1].id])
   }
   onClick3() {
-    this.route.navigate(['read/' + this.datas[2].name ])
+    this.route.navigate(['read/' + this.datas[2].name + "/" + this.datas[2].id])
 }
 onClick4() {
-  this.route.navigate(['read/' + this.datas[3].name ])
+  this.route.navigate(['read/' + this.datas[3].name + "/" + this.datas[3].id])
 }
 onClick5() {
-  this.route.navigate(['read/' + this.datas[4].name ])
+  this.route.navigate(['read/' + this.datas[4].name + "/" + this.datas[4].id])
 }
 onClick6() {
-  this.route.navigate(['read/' + this.datas[5].name ])
+  this.route.navigate(['read/' + this.datas[5].name + "/" + this.datas[5].id])
 }onClick7() {
-  this.route.navigate(['read/' + this.datas[6].name ])
+  this.route.navigate(['read/' + this.datas[6].name + "/" + this.datas[6].id])
 }
 onClick8() {
-      this.route.navigate(['read/' + this.datas[7].name ])
+  this.route.navigate(['read/' + this.datas[7].name + "/" + this.datas[7].id])
   }
   onClick9() {
-    this.route.navigate(['read/' + this.datas[8].name ])
+    this.route.navigate(['read/' + this.datas[8].name + "/" + this.datas[8].id])
 }
 onClick10() {
-  this.route.navigate(['read/' + this.datas[9].name ])
+  this.route.navigate(['read/' + this.datas[9].name + "/" + this.datas[9].id])
 }
 onClick11() {
-  this.route.navigate(['read/' + this.datas[10].name ])
+  this.route.navigate(['read/' + this.datas[10].name + "/" + this.datas[10].id])
 }
 onClick12() {
-  this.route.navigate(['read/' + this.datas[11].name ])
+  this.route.navigate(['read/' + this.datas[11].name + "/" + this.datas[11].id])
 }
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => result.matches),
-      shareReplay()
-    );
+
 
   ngOnInit(): void {
   }
