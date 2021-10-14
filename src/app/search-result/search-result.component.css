@@ -1,0 +1,72 @@
+
+.contain {
+    background: rgb(250, 248, 248); 
+    margin-top: -1cm;
+    display: flex;
+    flex-direction: column;
+   
+  }
+  .div {
+    background: white;
+    display: block;
+    margin: 0 auto;
+    margin-top: 2cm ;
+    margin-bottom: 0.5cm;
+    box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+  }
+  div[size="A4"] {  
+    width: 21cm;
+    height: 29.7cm; 
+  }
+  div[size="A4"][layout="landscape"] {
+    width: 29.7cm;
+    height: fit-content;  
+  }
+  div[size="A4"][layout="potrait"] {
+    width: fit-content;
+    height: fit-content;  
+  }
+  .no_internet {
+    align-self: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .no_internet_alert {
+    align-self: center;
+    position: fixed;
+    top: -70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10em; 
+    text-shadow: 0 2px 2px #000; 
+  }
+  @media print {
+    body, div {
+      margin: 0;
+      box-shadow: 0;
+    }
+  }
+  input {
+      width: 300px;
+      height: 50px;
+      border-radius: 10px 10px;
+      border-color: tomato;
+      font-size: 20px;
+      padding: 10px;
+      box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+      
+  }
+  input:focus {
+      border-color: rgb(161, 50, 31);
+  }
+  .input-span {
+      align-self: center;
+      margin-top: 100px;
+
+      
+  }
+ .preview div em {
+    font-weight: bold;
+}

@@ -1,0 +1,140 @@
+<!--Large Screen-->
+
+<div class="contain" *ngIf="!isMobile">
+
+    <div class="input-span">
+
+    </div>
+    <mat-spinner *ngIf="isLoading && !isNetworkBad " color="warn" diameter="60" style="
+      align-self: center;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);"></mat-spinner>
+    <div *ngIf="isNetworkBad">
+
+        <div class="no_internet">
+            <div>
+
+
+                <h1 class="no_internet_alert">⚠</h1>
+                <h2>No connection to the internet</h2>
+                <p>Please check your internet connection.</p>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+    <div class="div" size="A4" layout="landscape" *ngIf="!isMobile && !isLoading">
+
+
+        <a class="navbar-brand" href="index.html">
+            <p style="font-size: 30px; font-weight: bold; margin-top: 14px;">LAW<span
+                    style="color: tomato; text-decoration: underline; text-decoration-color: grey;">hive</span></p>
+        </a>
+        <div *ngFor="let result of searchResult" style="margin-top: 10px;">
+            <div>
+                <div style="display: flex; justify-content: space-between; ">
+                    <a href="{{result.frontend_pdf_url}}" style="font-weight: bold; ">
+                        {{result.name_abbreviation}}
+                    </a>
+
+                    <span style="font-weight: bold;">DATE: {{result.decision_date}}</span>
+
+                </div>
+                <span style="font-weight: bold; ">
+                    {{result.court.name}}
+                </span>
+
+            </div>
+            <br>
+            <div class="preview">
+                <div [innerHTML]="result.preview">...</div>
+            </div>
+            <a href="{{result.frontend_pdf_url}}">
+                <button mat-button>PDF</button>
+            </a>
+            <a routerLink="../../read/{{result.name_abbreviation}}/{{result.id}}">
+                <button mat-button>Read</button>
+            </a>
+            <hr>
+        </div>
+
+
+
+
+    </div>
+</div>
+
+
+<!--Small Screen-->
+<div class="contain" *ngIf="isMobile">
+    <br>
+    <br>
+    <br>
+    <div style="background-image: url(../../assets/images/justice.jpg); background-size: cover;">
+
+    </div>
+    <mat-spinner *ngIf="isLoading && !isNetworkBad " color="warn" diameter="60" style="
+    align-self: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);"></mat-spinner>
+    <div *ngIf="isNetworkBad">
+
+        <div class="no_internet">
+            <div>
+
+
+                <h1 class="no_internet_alert">⚠</h1>
+                <h2>No connection to the internet</h2>
+                <p>Please check your internet connection.</p>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="div" size="A4" layout="potrait" *ngIf="isMobile && !isLoading">
+
+
+        <a class="navbar-brand" href="index.html">
+            <p style="font-size: 30px; font-weight: bold; margin-top: 14px;">LAW<span
+                    style="color: tomato; text-decoration: underline; text-decoration-color: grey;">hive</span></p>
+        </a>
+        <div *ngFor="let result of searchResult" style="margin-top: 10px;">
+            <div>
+                <div style="display: flex; justify-content: space-between; ">
+                    <a href="{{result.frontend_pdf_url}}" style="font-weight: bold; ">
+                        {{result.name_abbreviation}}
+                    </a>
+
+                    <span style="font-weight: bold;">DATE: {{result.decision_date}}</span>
+
+                </div>
+                <span style="font-weight: bold; ">
+                    {{result.court.name}}
+                </span>
+
+            </div>
+            <br>
+            <div class="preview">
+                <div [innerHTML]="result.preview">...</div>
+            </div>
+            <a href="{{result.frontend_pdf_url}}">
+                <button mat-button>PDF</button>
+            </a>
+            <a routerLink="../../read/{{result.name_abbreviation}}/{{result.id}}">
+                <button mat-button>Read</button>
+            </a>
+            <hr>
+        </div>
+
+
+
+
+    </div>
+</div>

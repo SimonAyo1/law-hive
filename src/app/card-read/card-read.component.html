@@ -1,0 +1,68 @@
+<mat-spinner *ngIf="isLoading && !isNetworkBad " color="warn" diameter="60" style="
+align-self: center;
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);"></mat-spinner>
+<div *ngIf="isNetworkBad">
+
+    <div class="no_internet">
+        <div>
+
+
+            <h1 class="no_internet_alert">⚠</h1>
+            <h2>No connection to the internet</h2>
+            <p>Please check your internet connection.</p>
+
+        </div>
+
+    </div>
+
+
+
+</div>
+<div class="div" size="A4" [id]="view" *ngIf="!isLoading">
+
+
+    <a class="navbar-brand" href="index.html">
+        <p style="
+       font-size: 30px; font-weight:
+        bold; margin-top: 14px;">LAW<span style="color: tomato;
+        font-size: 30px;
+        text-decoration: underline; text-decoration-color: grey;">hive</span></p>
+    </a>
+
+    <div class="body">
+        <div class="contain">
+            <div>
+                <h2>{{datas.name}}</h2>
+                <hr>
+                <div> <span style="color: rgb(224, 102, 58);; font-size: 15px;">Judges:</span>
+                    {{datas.casebody.data.judges}}</div>
+                <div> <span style="color: rgb(224, 102, 58);; font-size: 15px;">Parties:</span>
+                    {{datas.casebody.data.parties}}</div>
+                <div> <span style="color: rgb(224, 102, 58);; font-size: 15px;">Attorneys:</span>
+                    {{datas.casebody.data.attorneys}}</div>
+            </div>
+
+            <br>
+            <span>SUMMARY</span>
+
+            <div class="content">
+                <div> {{datas.casebody.data.head_matter}}</div>
+            </div>
+            <br>
+            <span>OPINIONS</span>
+
+            <div class="content">
+                <div> {{datas.casebody.data.opinions[0].text}}</div>
+            </div>
+
+        </div>
+        <br>
+        <br>
+    </div>
+
+
+
+</div>

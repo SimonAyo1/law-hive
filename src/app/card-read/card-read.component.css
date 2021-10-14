@@ -1,0 +1,73 @@
+.body {
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+}
+.contain {
+    height: fit-content; 
+    display: flex;
+    width: 98%; 
+    flex-direction: column; 
+    align-items: center;
+  
+    box-shadow: rgb(98, 95, 95);
+
+}
+h2 {
+    font-weight: bold;
+    color: rgb(199, 92, 53);
+    text-align: center;
+    font-size: x-large;
+}
+span {
+    font-weight: bold;
+    color: rgb(224, 102, 58);
+    text-align: center;
+    font-size: 1.5em;
+}
+.content {
+ 
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.3em;
+    line-height: 1.5em;
+    text-align: justify;
+    text-indent: 2em;
+    margin-top: 20px;
+   
+}
+div[size="A4"] {  
+    width: 21cm;
+    height: 29.7cm; 
+  }
+  div[size="A4"][id="landscape"] {
+    width: 29.7cm;
+    height: fit-content;  
+  }
+  div[size="A4"][id="potrait"] {
+    width: fit-content;
+    height: fit-content;  
+  }
+  .div {
+    background: white;
+    display: block;
+    margin: 0 auto;
+    margin-top: 2cm ;
+    margin-bottom: 0.5cm;
+    box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+  }
+  .no_internet {
+    align-self: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .no_internet_alert {
+    align-self: center;
+    position: fixed;
+    top: -70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10em; 
+    text-shadow: 0 2px 2px #000; 
+  }
