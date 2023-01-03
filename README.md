@@ -1,6 +1,6 @@
 # Law Hive
 
-Law hive is a great web app for law students, it provides a great archive of court cases in the united states s
+Law hive is a great web app for law students, it provides a great archive of court cases in the united states, it includes all official, book-published state and federal United States case law — every volume or case designated as an official report of decisions by a court within the United States.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
 
